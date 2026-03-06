@@ -59,6 +59,7 @@ font-weight:bold;
 border-radius:20px;
 cursor:pointer;
 margin-top:20px;
+font-size:16px;
 }
 
 footer{
@@ -73,7 +74,8 @@ background:rgba(0,0,0,0.3);
 <body>
 
 <!-- Music -->
-<audio autoplay loop>
+
+<audio id="music" loop>
 <source src="love-music.mp3" type="audio/mpeg">
 </audio>
 
@@ -81,6 +83,8 @@ background:rgba(0,0,0,0.3);
 
 <h1>Prince ❤️ Priyanshi</h1>
 <p>Our Magical Love Story</p>
+
+<button onclick="playMusic()">Play Our Love Song ❤️</button>
 
 </header>
 
@@ -102,28 +106,15 @@ tum hamesha mera saath deti ho.
 Tum sirf meri girlfriend nahi ho,  
 tum meri strength, meri happiness aur meri inspiration ho.  
 
-Mere liye tum duniya ki **sabse beautiful girl** ho. ❤️ AND Priyanshi,  
-tum meri life ki sabse khoobsurat kahani ho.  
-Tumhari smile meri duniya roshan kar deti hai.  
+Mere liye tum duniya ki **sabse beautiful girl** ho. ❤️  
 
-Jab bhi life mushkil hoti hai,  
-tum hamesha mera saath deti ho.  
-Tumhari support meri sabse badi strength hai.  
+Tumhe dekh kar lagta hai jaise  
+"chaand zameen par utar aaya ho."  
 
-Mere liye tum duniya ki sabse beautiful girl ho,  
-tumhari simplicity hi tumhe aur bhi special banati hai.  
+Aur sach kahun…  
 
-Aur ek choti si Bollywood style baat:
-
-Chaand se bhi zyada roshan ho tumhari muskaan,  
-phoolon se bhi zyada khoobsurat ho tumhari pehchaan.  
-
-Rab se bas itni si dua karta hoon har baar,  
-meri Priyanshi hamesha khush rahe,  
-yehi hai meri sabse badi pyaar bhari pukaar.  
-
-Har pal tumhari hasi chamakti rahe sitaron ki tarah,  
-aur meri life mein tum hamesha raho ek pyari si dua ki tarah. ❤️
+"Tu mile ya na mile ye to kismat ki baat hai,  
+par sukoon bahut milta hai tujhe apna soch kar."  
 
 </p>
 
@@ -177,6 +168,12 @@ aur meri life mein tum hamesha raho ek pyari si dua ki tarah. ❤️
 
 <script>
 
+/* Play music */
+
+function playMusic(){
+document.getElementById("music").play();
+}
+
 /* Falling hearts */
 
 setInterval(()=>{
@@ -194,10 +191,9 @@ setTimeout(()=>{heart.remove();},6000);
 
 let birthday=new Date("March 12, 2026 00:00:00").getTime();
 
-let x=setInterval(function(){
+setInterval(function(){
 
 let now=new Date().getTime();
-
 let distance=birthday-now;
 
 let days=Math.floor(distance/(1000*60*60*24));
@@ -209,9 +205,9 @@ days+" days "+hours+" hours "+minutes+" minutes left until Priyanshi's birthday 
 
 },1000);
 
-/* Love timer (edit the date you met) */
+/* Love timer */
 
-let loveStart=new Date("February 21, 2023").getTime();
+let loveStart=new Date("January 1, 2025").getTime();
 
 setInterval(function(){
 
