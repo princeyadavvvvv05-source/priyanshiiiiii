@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Prince ❤️ Priyanshi</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background:linear-gradient(135deg,#ff6a88,#ff99ac);
+overflow-x:hidden;
+}
+
+/* Falling hearts */
+
+.heart{
+position:fixed;
+top:-10px;
+color:red;
+font-size:20px;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10px);}
+100%{transform:translateY(100vh);}
+}
+
+header{
+padding:70px 20px;
+}
+
+h1{
+font-size:45px;
+}
+
+section{
+padding:40px;
+}
+
+.box{
+background:rgba(0,0,0,0.2);
+padding:30px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+}
+
+button{
+padding:12px 20px;
+border:none;
+background:white;
+color:#ff4d6d;
+font-weight:bold;
+border-radius:20px;
+cursor:pointer;
+margin-top:20px;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+background:rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Music -->
+<audio autoplay loop>
+<source src="love-music.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+
+<h1>Prince ❤️ Priyanshi</h1>
+<p>Our Magical Love Story</p>
+
+</header>
+
+<section>
+
+<div class="box">
+
+<h2>About My Beautiful Priyanshi</h2>
+
+<p>
+
+Priyanshi,  
+tum meri life ki sabse khoobsurat kahani ho.  
+Tumhari smile meri duniya roshan kar deti hai.  
+
+Jab bhi life mushkil hoti hai,  
+tum hamesha mera saath deti ho.  
+
+Tum sirf meri girlfriend nahi ho,  
+tum meri strength, meri happiness aur meri inspiration ho.  
+
+Mere liye tum duniya ki **sabse beautiful girl** ho. ❤️ AND Priyanshi,  
+tum meri life ki sabse khoobsurat kahani ho.  
+Tumhari smile meri duniya roshan kar deti hai.  
+
+Jab bhi life mushkil hoti hai,  
+tum hamesha mera saath deti ho.  
+Tumhari support meri sabse badi strength hai.  
+
+Mere liye tum duniya ki sabse beautiful girl ho,  
+tumhari simplicity hi tumhe aur bhi special banati hai.  
+
+Aur ek choti si Bollywood style baat:
+
+Chaand se bhi zyada roshan ho tumhari muskaan,  
+phoolon se bhi zyada khoobsurat ho tumhari pehchaan.  
+
+Rab se bas itni si dua karta hoon har baar,  
+meri Priyanshi hamesha khush rahe,  
+yehi hai meri sabse badi pyaar bhari pukaar.  
+
+Har pal tumhari hasi chamakti rahe sitaron ki tarah,  
+aur meri life mein tum hamesha raho ek pyari si dua ki tarah. ❤️
+
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="box">
+
+<h2>🎂 Birthday Countdown 🎂</h2>
+
+<p id="countdown"></p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="box">
+
+<h2>⏳ Our Love Timer</h2>
+
+<p id="lovetimer"></p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="box">
+
+<h2>💌 A Surprise for Priyanshi</h2>
+
+<button onclick="showMessage()">Click for a Surprise</button>
+
+<p id="secret"></p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Made with ❤️ by Prince</p>
+
+</footer>
+
+<script>
+
+/* Falling hearts */
+
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},6000);
+
+},300);
+
+/* Birthday countdown */
+
+let birthday=new Date("March 12, 2026 00:00:00").getTime();
+
+let x=setInterval(function(){
+
+let now=new Date().getTime();
+
+let distance=birthday-now;
+
+let days=Math.floor(distance/(1000*60*60*24));
+let hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+let minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("countdown").innerHTML=
+days+" days "+hours+" hours "+minutes+" minutes left until Priyanshi's birthday ❤️";
+
+},1000);
+
+/* Love timer (edit the date you met) */
+
+let loveStart=new Date("February 21, 2023").getTime();
+
+setInterval(function(){
+
+let now=new Date().getTime();
+let diff=now-loveStart;
+
+let days=Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("lovetimer").innerHTML=
+"We have loved each other for "+days+" beautiful days ❤️";
+
+},1000);
+
+/* Hidden message */
+
+function showMessage(){
+
+document.getElementById("secret").innerHTML=
+"Priyanshi ❤️ tum meri life ki sabse special girl ho. Tumhari smile meri duniya hai. Happy Birthday meri jaan 🎂";
+
+}
+
+</script>
+
+</body>
+</html>
